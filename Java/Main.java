@@ -1,4 +1,5 @@
-    import java.util.*;
+import java;
+import java.util.*;
     public class Main {
 
         public int ageCalc(int age){
