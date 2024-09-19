@@ -1,7 +1,9 @@
+import java.lang.Math;
+
 public class JavaFunctionalInterfaces {
     public static void main(String[] args) {
         Person randomPerson = new Person("Ravi", 25, 150);
-        Printable printThing = () -> System.out.println("This is the Person Class Print Method");
+        Printable printThing = () -> 1000;
         printThing(printThing);
     }
 
