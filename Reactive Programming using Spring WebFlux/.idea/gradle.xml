@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/movies-info-servies" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reactive-spring-webflux-final" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/reactive-spring-webflux-final" />
+            <option value="$PROJECT_DIR$/reactive-spring-webflux-final/movies-info-service" />
+            <option value="$PROJECT_DIR$/reactive-spring-webflux-final/movies-review-service" />
+            <option value="$PROJECT_DIR$/reactive-spring-webflux-final/movies-service" />
+            <option value="$PROJECT_DIR$/reactive-spring-webflux-final/reactive-programming-using-reactor" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

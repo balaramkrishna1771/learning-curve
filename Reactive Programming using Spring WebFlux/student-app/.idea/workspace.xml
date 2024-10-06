@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Reactive Programming using Spring WebFlux.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules/movies-info-service/reactive-spring-webflux.movies-info-service.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules/movies-review-service/reactive-spring-webflux.movies-review-service.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules/movies-service/reactive-spring-webflux.movies-service.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/client/ReviewsRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/exception/MoviesInfoClientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/exception/MoviesInfoServerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/globalexceptionhandler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/errorhandler/GlobalErrorHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/exception/StudentInfoNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-info-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-info-service/src/test/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoControllerIntgTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-info-service/src/test/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoControllerUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/domain/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/repository/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/test/java/com/reactivespring/studentspaymentservice/controller/PaymentControllerIntgTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Practice/JavaFunctionalInterfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/Practice/JavaFunctionalInterfaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maven/movies-info-service/src/main/java/com/reactivespring/moviesinfoservice/controller/FluxAndMonoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Maven/movies-info-service/src/main/java/com/reactivespring/moviesinfoservice/controller/FluxAndMonoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maven/movies-info-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Maven/movies-info-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maven/movies-info-service/src/test/java/com/reactivespring/moviesinfoservice/controller/FluxAndMonoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Maven/movies-info-service/src/test/java/com/reactivespring/moviesinfoservice/controller/FluxAndMonoControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-info-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-info-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/client/MoviesInfoRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/client/MoviesInfoRestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/controller/MoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/controller/MoviesController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;balaramkrishna1771&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/balaramkrishna1771/learning-curve.git&quot;,
+    &quot;accountId&quot;: &quot;52afb60e-1502-4759-b373-41332cfabfbd&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2mw27UbEabxCgDwj3aDkqUP1Edm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortKey" value="BY_TIME_ASCENDING" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "JUnit.PaymentControllerIntgTest.addPaymentRecord.executor": "Run",
+    "JUnit.PaymentControllerIntgTest.deletePaymentInfo.executor": "Run",
+    "JUnit.PaymentControllerIntgTest.getAllPayments.executor": "Run",
+    "JUnit.PaymentControllerIntgTest.getPaymentById.executor": "Run",
+    "JUnit.PaymentControllerIntgTest.updatePaymentRecord.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.addStudentInfo.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.addStudentInfo_validation.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.deleteStudentInfo.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.getStudentInfoById.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.getStudentInfoById_404_not_found.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.getStudentsInfo.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.getStudentsInfo_byEmail.executor": "Run",
+    "JUnit.StudentsInfoControllerIntgTest.updateStudentInfo.executor": "Run",
+    "JUnit.StudentsInfoControllerUnitTest.addStudentInfo.executor": "Run",
+    "JUnit.StudentsInfoControllerUnitTest.deleteStudentInfo.executor": "Run",
+    "JUnit.StudentsInfoControllerUnitTest.getStudentInfoById.executor": "Run",
+    "JUnit.StudentsInfoControllerUnitTest.getStudentsInfo.executor": "Run",
+    "JUnit.StudentsInfoControllerUnitTest.updateStudentInfo.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.StudentInfoServiceApplication.executor": "Run",
+    "Spring Boot.StudentsInfoServiceApplication (1).executor": "Run",
+    "Spring Boot.StudentsInfoServiceApplication.executor": "Run",
+    "Spring Boot.StudentsPaymentServiceApplication.executor": "Run",
+    "Spring Boot.StudentsServiceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-22",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Angular101/Desktop/learning-curve/Reactive Programming using Spring WebFlux/medi-buddy-app/frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.reactivespring.studentspaymentservice.controller" />
+      <recent name="com.reactivespring.studentsinfoservice.controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.PaymentControllerIntgTest.deletePaymentInfo">
+    <configuration name="PaymentControllerIntgTest.addPaymentRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-payment-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentspaymentservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentspaymentservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentspaymentservice.controller.PaymentControllerIntgTest" />
+      <option name="METHOD_NAME" value="addPaymentRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentControllerIntgTest.deletePaymentInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-payment-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentspaymentservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentspaymentservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentspaymentservice.controller.PaymentControllerIntgTest" />
+      <option name="METHOD_NAME" value="deletePaymentInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentControllerIntgTest.getAllPayments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-payment-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentspaymentservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentspaymentservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentspaymentservice.controller.PaymentControllerIntgTest" />
+      <option name="METHOD_NAME" value="getAllPayments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentControllerIntgTest.getPaymentById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-payment-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentspaymentservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentspaymentservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentspaymentservice.controller.PaymentControllerIntgTest" />
+      <option name="METHOD_NAME" value="getPaymentById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentControllerIntgTest.updatePaymentRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-payment-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentspaymentservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentspaymentservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentspaymentservice.controller.PaymentControllerIntgTest" />
+      <option name="METHOD_NAME" value="updatePaymentRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="student-app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="student-app" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsInfoServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="students-info-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.reactivespring.studentsinfoservice.StudentsInfoServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsPaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="students-payment-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.reactivespring.studentspaymentservice.StudentsPaymentServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="students-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.reactivespring.studentsservice.StudentsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.PaymentControllerIntgTest.addPaymentRecord" />
+      <item itemvalue="JUnit.PaymentControllerIntgTest.deletePaymentInfo" />
+      <item itemvalue="JUnit.PaymentControllerIntgTest.getAllPayments" />
+      <item itemvalue="JUnit.PaymentControllerIntgTest.getPaymentById" />
+      <item itemvalue="JUnit.PaymentControllerIntgTest.updatePaymentRecord" />
+      <item itemvalue="Spring Boot.StudentsInfoServiceApplication" />
+      <item itemvalue="Spring Boot.StudentsPaymentServiceApplication" />
+      <item itemvalue="Spring Boot.StudentsServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PaymentControllerIntgTest.deletePaymentInfo" />
+        <item itemvalue="JUnit.PaymentControllerIntgTest.updatePaymentRecord" />
+        <item itemvalue="JUnit.PaymentControllerIntgTest.getPaymentById" />
+        <item itemvalue="JUnit.PaymentControllerIntgTest.addPaymentRecord" />
+        <item itemvalue="JUnit.PaymentControllerIntgTest.getAllPayments" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="" />
+      <created>1727973150833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727973150833</updated>
+      <workItem from="1727973152041" duration="768000" />
+      <workItem from="1727973956779" duration="331000" />
+      <workItem from="1727974301181" duration="330000" />
+      <workItem from="1727974654006" duration="102000" />
+      <workItem from="1727974885071" duration="18133000" />
+      <workItem from="1728056714987" duration="8649000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

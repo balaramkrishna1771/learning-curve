@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="062982df-b244-48f9-a2f8-b797299ac249" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../React/my-app/src/componets/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../React/my-app/src/componets/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../React/my-app/src/componets/HomePageSurvey.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../React/my-app/src/componets/HomePageSurvey.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../React/my-app/src/componets/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../React/my-app/src/componets/LoginPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/client/ReviewsRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/exception/MoviesInfoClientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/exception/MoviesInfoServerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/globalexceptionhandler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Practice/JavaFunctionalInterfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/Practice/JavaFunctionalInterfaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/client/MoviesInfoRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/client/MoviesInfoRestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/controller/MoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reactive-spring-webflux-final/movies-service/src/main/java/com/reactivespring/controller/MoviesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,7 @@
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Angular101/Desktop/learning-curve/Reactive Programming using Spring WebFlux/Maven/movies-info-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +78,7 @@
       <updated>1726014718520</updated>
       <workItem from="1726014719316" duration="487000" />
       <workItem from="1726015221877" duration="249000" />
+      <workItem from="1727655515480" duration="59000" />
     </task>
     <servers />
   </component>
