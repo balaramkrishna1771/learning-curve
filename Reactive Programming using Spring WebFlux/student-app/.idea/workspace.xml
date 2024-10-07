@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/client/PaymentsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/client/StudentInfoRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/controller/StudentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/domain/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/domain/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/domain/StudentInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/domain/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/domain/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/repository/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/repository/PaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/src/test/java/com/reactivespring/studentspaymentservice/controller/PaymentControllerIntgTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/test/java/com/reactivespring/studentspaymentservice/controller/PaymentControllerIntgTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/StudentsServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/StudentsServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-service/src/main/resources/application.properties" beforeDir="false" />
-    </list>
+    <list default="true" id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -335,7 +312,7 @@
       <workItem from="1727974301181" duration="330000" />
       <workItem from="1727974654006" duration="102000" />
       <workItem from="1727974885071" duration="18133000" />
-      <workItem from="1728056714987" duration="16160000" />
+      <workItem from="1728056714987" duration="16616000" />
     </task>
     <servers />
   </component>
