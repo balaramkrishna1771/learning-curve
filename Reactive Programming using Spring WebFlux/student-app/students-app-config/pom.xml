@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.reactivespring</groupId>
-    <artifactId>student-app-config</artifactId>
+    <artifactId>students-app-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>student-app-config</name>
     <description>student-app-config</description>

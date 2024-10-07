@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="student-app-config" />
         <module name="students-payment-service" />
         <module name="students-info-service" />
         <module name="students-service" />
@@ -15,12 +14,13 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="student-info-service" target="17" />
+      <module name="students-app-config" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="student-app-config" options="-parameters" />
       <module name="student-info-service" options="-parameters" />
+      <module name="students-app-config" options="-parameters" />
       <module name="students-info-service" options="-parameters" />
       <module name="students-payment-service" options="-parameters" />
       <module name="students-service" options="-parameters" />
