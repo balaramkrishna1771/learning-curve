@@ -1,4 +1,4 @@
-package com.reactivespring.studentspaymentservice.domain;
+package com.reactivespring.studentsservice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -17,7 +17,11 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping("/payments")
-    public Flux<Payment> getAllPayments(){
+    public Flux<Payment> getAllPayments(@RequestParam(value = "studentId", required = false) Integer studentId){
+        if(studentId != null){
+            return paymentService.getPaymentsByStudentId(studentId);
+        }
+
         return paymentService.getAllPayments();
     }
 
@@ -27,6 +31,7 @@ public class PaymentController {
                 .map(paymentInfo -> ResponseEntity.status(HttpStatus.OK).body(paymentInfo))
                 .switchIfEmpty(Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).build()));
     }
+
 
     @PostMapping("/payments")
     @ResponseStatus(HttpStatus.CREATED)

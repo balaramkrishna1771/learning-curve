@@ -7,6 +7,7 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -88,5 +89,23 @@ class PaymentControllerIntgTest {
                 .exchange()
                 .expectStatus()
                 .is2xxSuccessful();
+    }
+
+    @Test
+    void getAllPayments_byStudentId() {
+        var studentId = 2;
+
+        var url = UriComponentsBuilder.fromUriString(PAYMENT_URL)
+                        .queryParam("studentId", studentId)
+                                .buildAndExpand()
+                                        .toUri();
+
+        webTestClient.get()
+                .uri(url)
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBodyList(Payment.class)
+                .hasSize(3);
     }
 }

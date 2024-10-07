@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/students-payment-service/pom.xml" />
         <option value="$PROJECT_DIR$/students-service/pom.xml" />
         <option value="$PROJECT_DIR$/students-info-service/pom.xml" />
+        <option value="$PROJECT_DIR$/student-app-config/pom.xml" />
       </list>
     </option>
   </component>
