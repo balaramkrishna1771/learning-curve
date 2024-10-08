@@ -144,7 +144,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.StudentsServiceApplication">
+  <component name="RunManager" selected="Spring Boot.StudentsInfoServiceApplication">
     <configuration name="PaymentControllerIntgTest.addPaymentRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="students-payment-service" />
       <extension name="coverage">

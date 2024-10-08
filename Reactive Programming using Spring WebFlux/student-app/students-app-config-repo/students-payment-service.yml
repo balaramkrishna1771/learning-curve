@@ -2,7 +2,7 @@ spring:
   r2dbc:
     url: r2dbc:mysql://localhost:3306/school_db
     username: root
-    password: Root@1234
+    password: "{cipher}5fb472e807e8b1b91ffb45c31b3ba33c55578d5b51fc5eeb6a2853a7e652d032"
 ---
 server:
   port: 8081
