@@ -1,0 +1,17 @@
+[
+    {
+      "studentId": 2,
+      "amount": 150.75,
+      "paymentId": 3
+    },
+    {
+      "studentId": 2,
+      "amount": 220.3,
+      "paymentId": 4
+    },
+    {
+      "studentId": 2,
+      "amount": 80.4,
+      "paymentId": 5
+    }
+]

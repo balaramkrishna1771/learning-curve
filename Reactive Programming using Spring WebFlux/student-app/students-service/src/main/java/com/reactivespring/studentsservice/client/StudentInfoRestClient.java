@@ -3,13 +3,18 @@ package com.reactivespring.studentsservice.client;
 import com.reactivespring.studentsservice.domain.StudentInfo;
 import com.reactivespring.studentsservice.exception.StudentInfoClientException;
 import com.reactivespring.studentsservice.exception.StudentInfoServerException;
+import com.reactivespring.studentsservice.util.RetryUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.Exceptions;
 import reactor.core.publisher.Mono;
+import reactor.util.retry.Retry;
+
+import java.time.Duration;
 
 @Slf4j
 @Component
@@ -24,6 +29,7 @@ public class StudentInfoRestClient {
     }
 
     public Mono<StudentInfo> retrieveStudentInfoById(Integer studentId){
+
         return webClient.get()
                 .uri(studentInfoUrl.concat("/{id}"),studentId)
                 .retrieve()
@@ -45,6 +51,8 @@ public class StudentInfoRestClient {
                                     "Server exception"+responseMessage)));
                 })
                 .bodyToMono(StudentInfo.class)
+//                .retry(3)
+                .retryWhen(RetryUtil.retrySpec())
                 .log();
     }
 

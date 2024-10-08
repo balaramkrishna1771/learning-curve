@@ -4,6 +4,7 @@ import com.reactivespring.studentsservice.domain.Payment;
 import com.reactivespring.studentsservice.exception.PaymentsClientException;
 import com.reactivespring.studentsservice.exception.PaymentsServerException;
 import com.reactivespring.studentsservice.exception.StudentInfoServerException;
+import com.reactivespring.studentsservice.util.RetryUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -47,12 +48,13 @@ public class PaymentsClient {
                             });
                 })
                 .onStatus(HttpStatusCode::is5xxServerError, clientResponse -> {
-                    log.error("Error code : {}",clientResponse);
+                    log.error("Error code : {}",clientResponse.statusCode());
                     return clientResponse.bodyToMono(String.class)
                             .flatMap(responseMessage -> Mono.error(new PaymentsServerException(
                                     "Server exception in Payments server"+responseMessage)));
                 })
                 .bodyToFlux(Payment.class)
+                .retryWhen(RetryUtil.retrySpec())
                 .log();
     }
 }
