@@ -1,5 +1,8 @@
-restClientUrl:
-  studentInfoUrl: http://localhost:8080/v1/studentinfos
-  paymentsUrl: http://localhost:8081/v1/payments
-server:
-  port: 8082
+spring:
+  application:
+    name: students-service
+  config:
+    import: "configserver:http://localhost:8888"
+  cloud:
+    config:
+      uri: http://localhost:8888

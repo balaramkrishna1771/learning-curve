@@ -2,6 +2,7 @@ package com.reactivespring.studentsinfoservice.controller;
 
 import com.reactivespring.studentsinfoservice.domain.StudentInfo;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import reactor.core.publisher.Mono;
 public class StudentsInfoController {
 
     private final StudentsInfoService studentsInfoService;
+
 
     public StudentsInfoController(StudentsInfoService studentsInfoService){
         this.studentsInfoService = studentsInfoService;
