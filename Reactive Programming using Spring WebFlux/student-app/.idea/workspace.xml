@@ -7,13 +7,6 @@
     <list default="true" id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/students-app-config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-app-config/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +309,7 @@
       <workItem from="1727974654006" duration="102000" />
       <workItem from="1727974885071" duration="18133000" />
       <workItem from="1728056714987" duration="19442000" />
-      <workItem from="1728367720270" duration="735000" />
+      <workItem from="1728367720270" duration="2067000" />
     </task>
     <servers />
   </component>

@@ -13,5 +13,10 @@ spring:
           clone-on-start: true
           default-label: dev
           search-paths: Reactive Programming using Spring WebFlux/student-app/students-app-config-repo
+---
+encrypt:
+  key: MySecretSymmetricKey123!
+---
+
 server:
   port: 8888
