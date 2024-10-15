@@ -42,7 +42,7 @@ class StudentsInfoControllerIntgTest {
                 .expectStatus()
                 .is2xxSuccessful()
                 .expectBodyList(StudentInfo.class)
-                .hasSize(5);
+                .hasSize(13);
     }
     @Test
     void getStudentsInfo_byEmail() {

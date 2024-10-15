@@ -1,6 +1,7 @@
 package com.reactivespring.studentsservice.client;
 
 import com.reactivespring.studentsservice.domain.Payment;
+import com.reactivespring.studentsservice.dto.PaymentDTO;
 import com.reactivespring.studentsservice.exception.PaymentsClientException;
 import com.reactivespring.studentsservice.exception.PaymentsServerException;
 import com.reactivespring.studentsservice.exception.StudentInfoServerException;
@@ -24,13 +25,13 @@ public class PaymentsClient {
     @Value("${restClientUrl.paymentsUrl}")
     private String paymentsUrl;
 
-    private WebClient webClient;
+    private final WebClient webClient;
     public PaymentsClient(WebClient webClient){
         this.webClient = webClient;
     }
 
 
-    public Flux<Payment> retrievePayments(Integer studentId){
+    public Flux<PaymentDTO> retrievePayments(Integer studentId){
 
         var url = UriComponentsBuilder.fromHttpUrl(paymentsUrl)
                 .queryParam("studentId", studentId)
@@ -53,7 +54,7 @@ public class PaymentsClient {
                             .flatMap(responseMessage -> Mono.error(new PaymentsServerException(
                                     "Server exception in Payments server"+responseMessage)));
                 })
-                .bodyToFlux(Payment.class)
+                .bodyToFlux(PaymentDTO.class)
                 .retryWhen(RetryUtil.retrySpec())
                 .log();
     }

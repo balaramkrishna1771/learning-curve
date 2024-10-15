@@ -1,6 +1,7 @@
 package com.reactivespring.studentspaymentservice.controller;
 
 import com.reactivespring.studentspaymentservice.domain.Payment;
+import com.reactivespring.studentspaymentservice.dto.PaymentDTO;
 import com.reactivespring.studentspaymentservice.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +18,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping("/payments")
-    public Flux<Payment> getAllPayments(@RequestParam(value = "studentId", required = false) Integer studentId){
+    public Flux<PaymentDTO> getAllPayments(@RequestParam(value = "studentId", required = false) Integer studentId){
         if(studentId != null){
             return paymentService.getPaymentsByStudentId(studentId);
         }
@@ -26,7 +27,7 @@ public class PaymentController {
     }
 
     @GetMapping("/payments/{id}")
-    public Mono<ResponseEntity<Payment>> getPaymentById(@PathVariable("id") Integer paymentId){
+    public Mono<ResponseEntity<PaymentDTO>> getPaymentById(@PathVariable("id") Integer paymentId){
         return paymentService.getPaymentById(paymentId)
                 .map(paymentInfo -> ResponseEntity.status(HttpStatus.OK).body(paymentInfo))
                 .switchIfEmpty(Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).build()));
@@ -35,12 +36,12 @@ public class PaymentController {
 
     @PostMapping("/payments")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mono<Payment> addPaymentRecord(@RequestBody Payment payment){
+    public Mono<PaymentDTO> addPaymentRecord(@RequestBody Payment payment){
         return paymentService.addPaymentRecord(payment);
     }
 
     @PutMapping("/payments/{id}")
-    public Mono<Payment> updatePaymentRecord(@RequestBody Payment paymentInfo, @PathVariable("id") Integer paymentId){
+    public Mono<PaymentDTO> updatePaymentRecord(@RequestBody Payment paymentInfo, @PathVariable("id") Integer paymentId){
         return paymentService.updatePaymentRecord(paymentInfo,paymentId);
     }
 

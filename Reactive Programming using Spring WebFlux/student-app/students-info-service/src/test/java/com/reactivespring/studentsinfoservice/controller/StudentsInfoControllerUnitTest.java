@@ -1,6 +1,8 @@
 package com.reactivespring.studentsinfoservice.controller;
 
 import com.reactivespring.studentsinfoservice.domain.StudentInfo;
+import com.reactivespring.studentsinfoservice.dto.StudentInfoDTO;
+import com.reactivespring.studentsinfoservice.service.StudentInfoMapper;
 import com.reactivespring.studentsinfoservice.service.StudentsInfoService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,12 +35,14 @@ class StudentsInfoControllerUnitTest {
 
     @Autowired
     private WebTestClient webTestClient;
+    @Autowired
+    private StudentInfoMapper studentInfoMapper;
 
 
     @Test
     void getStudentsInfo() {
-        var studentInfos = List.of(new StudentInfo(1,"ram","krishna","ram.krishna@gmail.com",25),
-                new StudentInfo(2,"tim","krishna","tim.krishna@gmail.com",27));
+        var studentInfos = List.of(new StudentInfoDTO("ram krishna",25),
+                new StudentInfoDTO("Steve smith",26));
 
         when(studentsInfoServiceMock.findAllStudentsInfo()).thenReturn(Flux.fromIterable(studentInfos));
 
@@ -54,8 +58,7 @@ class StudentsInfoControllerUnitTest {
     @Test
     void getStudentInfoById() {
         var studentId = 3;
-        var studentInfo = new StudentInfo(3,"ram","krishna","ram.krishna@gmail.com",25);
-
+        var studentInfo = new StudentInfoDTO("ram krishna",25);
         when(studentsInfoServiceMock.findStudentById(studentId)).thenReturn(Mono.just(studentInfo));
 
         webTestClient.get()
@@ -77,8 +80,9 @@ class StudentsInfoControllerUnitTest {
     void addStudentInfo() {
         var studentInfo = new StudentInfo(7,"ram","krishna","ram.krishna@gmail.com",25);
 
+        var studentInfoDTO = new StudentInfoDTO("ram krishna",25);
 
-        when(studentsInfoServiceMock.addStudentInfo(studentInfo)).thenReturn(Mono.just(studentInfo));
+        when(studentsInfoServiceMock.addStudentInfo(studentInfo)).thenReturn(Mono.just(studentInfoDTO));
 
         webTestClient.post()
                 .uri(STUDENT_INFO_URL)
@@ -94,7 +98,8 @@ class StudentsInfoControllerUnitTest {
         var updatedStudentInfo = new StudentInfo(6,"Balaram","krishna","ram.krishna@gmail.com",27);
         var studentId = 6;
 
-        when(studentsInfoServiceMock.updatedStudentInfo(updatedStudentInfo,studentId)).thenReturn(Mono.just(updatedStudentInfo));
+        when(studentsInfoServiceMock.updatedStudentInfo(updatedStudentInfo,studentId))
+                .thenReturn(Mono.just(updatedStudentInfo).map(studentInfoMapper));
 
         webTestClient.put()
                 .uri(STUDENT_INFO_URL+"/{id}", studentId)

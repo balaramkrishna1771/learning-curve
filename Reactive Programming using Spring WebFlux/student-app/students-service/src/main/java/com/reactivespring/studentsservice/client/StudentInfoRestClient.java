@@ -1,6 +1,7 @@
 package com.reactivespring.studentsservice.client;
 
 import com.reactivespring.studentsservice.domain.StudentInfo;
+import com.reactivespring.studentsservice.dto.StudentInfoDTO;
 import com.reactivespring.studentsservice.exception.StudentInfoClientException;
 import com.reactivespring.studentsservice.exception.StudentInfoServerException;
 import com.reactivespring.studentsservice.util.RetryUtil;
@@ -28,7 +29,7 @@ public class StudentInfoRestClient {
         this.webClient = webClient;
     }
 
-    public Mono<StudentInfo> retrieveStudentInfoById(Integer studentId){
+    public Mono<StudentInfoDTO> retrieveStudentInfoById(Integer studentId){
 
         return webClient.get()
                 .uri(studentInfoUrl.concat("/{id}"),studentId)
@@ -50,7 +51,7 @@ public class StudentInfoRestClient {
                             .flatMap(responseMessage -> Mono.error(new StudentInfoServerException(
                                     "Server exception"+responseMessage)));
                 })
-                .bodyToMono(StudentInfo.class)
+                .bodyToMono(StudentInfoDTO.class)
 //                .retry(3)
                 .retryWhen(RetryUtil.retrySpec())
                 .log();

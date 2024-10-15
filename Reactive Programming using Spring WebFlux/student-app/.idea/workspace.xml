@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/students-info-service/src/test/java/com/reactivespring/studentsinfoservice/SinksTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/dto/StudentInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/service/StudentInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/dto/PaymentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/dto/PaymentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/dto/StudentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/dto/StudentInfoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/service/StudentsInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/service/StudentsInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-info-service/src/test/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoControllerIntgTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/test/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoControllerIntgTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-info-service/src/test/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoControllerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/test/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoControllerUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/client/PaymentsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/client/PaymentsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/client/StudentInfoRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/client/StudentInfoRestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/controller/StudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/controller/StudentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/test/java/com/reactivespring/studentsservice/controller/StudentsControllerIntgTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/test/java/com/reactivespring/studentsservice/controller/StudentsControllerIntgTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +68,10 @@
     &quot;accountId&quot;: &quot;52afb60e-1502-4759-b373-41332cfabfbd&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -69,69 +91,69 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_ASCENDING" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "HTTP Request.generated-requests | #1.executor": "Run",
-    "JUnit.PaymentControllerIntgTest.addPaymentRecord.executor": "Run",
-    "JUnit.PaymentControllerIntgTest.deletePaymentInfo.executor": "Run",
-    "JUnit.PaymentControllerIntgTest.getAllPayments.executor": "Run",
-    "JUnit.PaymentControllerIntgTest.getAllPayments_byStudentId.executor": "Run",
-    "JUnit.PaymentControllerIntgTest.getPaymentById.executor": "Run",
-    "JUnit.PaymentControllerIntgTest.updatePaymentRecord.executor": "Run",
-    "JUnit.SinksTest.sinks.executor": "Run",
-    "JUnit.SinksTest.sinks_multicast.executor": "Run",
-    "JUnit.SinksTest.sinks_replay.executor": "Run",
-    "JUnit.StudentsControllerIntgTest.getStudentInfo.executor": "Run",
-    "JUnit.StudentsControllerIntgTest.getStudentInfo_404.executor": "Run",
-    "JUnit.StudentsControllerIntgTest.getStudentInfo_5XX.executor": "Run",
-    "JUnit.StudentsControllerIntgTest.getStudentInfo_payments_404.executor": "Run",
-    "JUnit.StudentsControllerIntgTest.getStudentInfo_payments_5XX.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.addStudentInfo.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.addStudentInfo_validation.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.deleteStudentInfo.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.getStudentInfoById.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.getStudentInfoById_404_not_found.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.getStudentsInfo.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.getStudentsInfo_byEmail.executor": "Run",
-    "JUnit.StudentsInfoControllerIntgTest.updateStudentInfo.executor": "Run",
-    "JUnit.StudentsInfoControllerUnitTest.addStudentInfo.executor": "Run",
-    "JUnit.StudentsInfoControllerUnitTest.deleteStudentInfo.executor": "Run",
-    "JUnit.StudentsInfoControllerUnitTest.getStudentInfoById.executor": "Run",
-    "JUnit.StudentsInfoControllerUnitTest.getStudentsInfo.executor": "Run",
-    "JUnit.StudentsInfoControllerUnitTest.updateStudentInfo.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.StudentInfoServiceApplication.executor": "Run",
-    "Spring Boot.StudentsInfoServiceApplication (1).executor": "Run",
-    "Spring Boot.StudentsInfoServiceApplication.executor": "Run",
-    "Spring Boot.StudentsPaymentServiceApplication.executor": "Run",
-    "Spring Boot.StudentsServiceApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-22",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Angular101/Desktop/learning-curve/Reactive Programming using Spring WebFlux/student-app/students-app-config",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentControllerIntgTest.addPaymentRecord.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentControllerIntgTest.deletePaymentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentControllerIntgTest.getAllPayments.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentControllerIntgTest.getAllPayments_byStudentId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentControllerIntgTest.getPaymentById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentControllerIntgTest.updatePaymentRecord.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinksTest.sinks.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinksTest.sinks_multicast.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinksTest.sinks_replay.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsControllerIntgTest.getStudentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsControllerIntgTest.getStudentInfo_404.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsControllerIntgTest.getStudentInfo_5XX.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsControllerIntgTest.getStudentInfo_payments_404.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsControllerIntgTest.getStudentInfo_payments_5XX.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.addStudentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.addStudentInfo_validation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.deleteStudentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.getStudentInfoById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.getStudentInfoById_404_not_found.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.getStudentsInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.getStudentsInfo_byEmail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerIntgTest.updateStudentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerUnitTest.addStudentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerUnitTest.deleteStudentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerUnitTest.getStudentInfoById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerUnitTest.getStudentsInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudentsInfoControllerUnitTest.updateStudentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.StudentInfoServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.StudentsInfoServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.StudentsInfoServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.StudentsPaymentServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.StudentsServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Angular101/Desktop/learning-curve/Reactive Programming using Spring WebFlux/student-app/students-app-config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -158,56 +180,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.StudentsInfoServiceApplication">
-    <configuration name="SinksTest.sinks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="students-info-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.reactivespring.studentsinfoservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.reactivespring.studentsinfoservice" />
-      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsinfoservice.SinksTest" />
-      <option name="METHOD_NAME" value="sinks" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SinksTest.sinks_multicast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="students-info-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.reactivespring.studentsinfoservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.reactivespring.studentsinfoservice" />
-      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsinfoservice.SinksTest" />
-      <option name="METHOD_NAME" value="sinks_multicast" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SinksTest.sinks_replay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="students-info-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.reactivespring.studentsinfoservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.reactivespring.studentsinfoservice" />
-      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsinfoservice.SinksTest" />
-      <option name="METHOD_NAME" value="sinks_replay" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentsControllerIntgTest.getStudentInfo_5XX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.StudentsServiceApplication">
+    <configuration name="StudentsControllerIntgTest.getStudentInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="students-service" />
       <extension name="coverage">
         <pattern>
@@ -217,23 +191,71 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.reactivespring.studentsservice.controller" />
       <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsservice.controller.StudentsControllerIntgTest" />
-      <option name="METHOD_NAME" value="getStudentInfo_5XX" />
+      <option name="METHOD_NAME" value="getStudentInfo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentsControllerIntgTest.getStudentInfo_payments_5XX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="students-service" />
+    <configuration name="StudentsInfoControllerIntgTest.getStudentInfoById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-info-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.reactivespring.studentsservice.controller.*" />
+          <option name="PATTERN" value="com.reactivespring.studentsinfoservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.reactivespring.studentsservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsservice.controller.StudentsControllerIntgTest" />
-      <option name="METHOD_NAME" value="getStudentInfo_payments_5XX" />
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentsinfoservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsinfoservice.controller.StudentsInfoControllerIntgTest" />
+      <option name="METHOD_NAME" value="getStudentInfoById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsInfoControllerIntgTest.getStudentsInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-info-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentsinfoservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentsinfoservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsinfoservice.controller.StudentsInfoControllerIntgTest" />
+      <option name="METHOD_NAME" value="getStudentsInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsInfoControllerUnitTest.getStudentInfoById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-info-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentsinfoservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentsinfoservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsinfoservice.controller.StudentsInfoControllerUnitTest" />
+      <option name="METHOD_NAME" value="getStudentInfoById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsInfoControllerUnitTest.updateStudentInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-info-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reactivespring.studentsinfoservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reactivespring.studentsinfoservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.reactivespring.studentsinfoservice.controller.StudentsInfoControllerUnitTest" />
+      <option name="METHOD_NAME" value="updateStudentInfo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -281,11 +303,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SinksTest.sinks" />
-      <item itemvalue="JUnit.SinksTest.sinks_multicast" />
-      <item itemvalue="JUnit.SinksTest.sinks_replay" />
-      <item itemvalue="JUnit.StudentsControllerIntgTest.getStudentInfo_5XX" />
-      <item itemvalue="JUnit.StudentsControllerIntgTest.getStudentInfo_payments_5XX" />
+      <item itemvalue="JUnit.StudentsInfoControllerIntgTest.getStudentInfoById" />
+      <item itemvalue="JUnit.StudentsInfoControllerIntgTest.getStudentsInfo" />
+      <item itemvalue="JUnit.StudentsInfoControllerUnitTest.getStudentInfoById" />
+      <item itemvalue="JUnit.StudentsInfoControllerUnitTest.updateStudentInfo" />
+      <item itemvalue="JUnit.StudentsControllerIntgTest.getStudentInfo" />
       <item itemvalue="Spring Boot.StudentsAppConfigApplication" />
       <item itemvalue="Spring Boot.StudentsInfoServiceApplication" />
       <item itemvalue="Spring Boot.StudentsPaymentServiceApplication" />
@@ -293,11 +315,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SinksTest.sinks_multicast" />
-        <item itemvalue="JUnit.SinksTest.sinks_replay" />
-        <item itemvalue="JUnit.SinksTest.sinks" />
-        <item itemvalue="JUnit.StudentsControllerIntgTest.getStudentInfo_payments_5XX" />
-        <item itemvalue="JUnit.StudentsControllerIntgTest.getStudentInfo_5XX" />
+        <item itemvalue="JUnit.StudentsInfoControllerIntgTest.getStudentsInfo" />
+        <item itemvalue="JUnit.StudentsInfoControllerUnitTest.getStudentInfoById" />
+        <item itemvalue="JUnit.StudentsInfoControllerUnitTest.updateStudentInfo" />
+        <item itemvalue="JUnit.StudentsInfoControllerIntgTest.getStudentInfoById" />
+        <item itemvalue="JUnit.StudentsControllerIntgTest.getStudentInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -324,6 +346,8 @@
       <workItem from="1727974885071" duration="18133000" />
       <workItem from="1728056714987" duration="19442000" />
       <workItem from="1728367720270" duration="23273000" />
+      <workItem from="1728590594639" duration="809000" />
+      <workItem from="1728963175036" duration="6891000" />
     </task>
     <servers />
   </component>

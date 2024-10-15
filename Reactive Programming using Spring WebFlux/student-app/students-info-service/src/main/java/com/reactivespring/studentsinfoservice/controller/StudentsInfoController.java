@@ -1,6 +1,7 @@
 package com.reactivespring.studentsinfoservice.controller;
 
 import com.reactivespring.studentsinfoservice.domain.StudentInfo;
+import com.reactivespring.studentsinfoservice.dto.StudentInfoDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class StudentsInfoController {
 
     private final StudentsInfoService studentsInfoService;
 
-    Sinks.Many<StudentInfo> studentInfoSink = Sinks.many().multicast().onBackpressureBuffer();
+    Sinks.Many<StudentInfoDTO> studentInfoSink = Sinks.many().multicast().onBackpressureBuffer();
 
 
     public StudentsInfoController(StudentsInfoService studentsInfoService){
@@ -26,7 +27,7 @@ public class StudentsInfoController {
     }
 
     @GetMapping("/studentinfos")
-    public Flux<StudentInfo> getStudentsInfo(@RequestParam(value = "email", required = false) String email){
+    public Flux<StudentInfoDTO> getStudentsInfo(@RequestParam(value = "email", required = false) String email){
         if(email != null){
             return studentsInfoService.findStudentInfoByEmail(email);
         }
@@ -34,7 +35,7 @@ public class StudentsInfoController {
     }
 
     @GetMapping("/studentinfos/{id}")
-    public Mono<ResponseEntity<StudentInfo>> getStudentInfoById(@PathVariable("id") Integer studentId){
+    public Mono<ResponseEntity<StudentInfoDTO>> getStudentInfoById(@PathVariable("id") Integer studentId){
         return studentsInfoService.findStudentById(studentId)
                 .map(studentInfo -> ResponseEntity.ok().body(studentInfo))
                 .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
@@ -42,20 +43,22 @@ public class StudentsInfoController {
     }
 
     @GetMapping(value = "/studentinfos/stream", produces = MediaType.APPLICATION_NDJSON_VALUE)
-    public Flux<StudentInfo> getStudentInfoStream(){
-        return Flux.merge(studentsInfoService.findAllStudentsInfo(),studentInfoSink.asFlux()).log();
+    public Flux<StudentInfoDTO> getStudentInfoStream(){
+//        return studentInfoSink.asFlux().log();
+        return Flux.merge(studentsInfoService.findAllStudentsInfo().defaultIfEmpty(new StudentInfoDTO()),
+                studentInfoSink.asFlux()).log();
 
     }
 
     @PostMapping("/studentinfos")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mono<StudentInfo> addStudentInfo(@RequestBody @Valid StudentInfo studentInfo){
+    public Mono<StudentInfoDTO> addStudentInfo(@RequestBody @Valid StudentInfo studentInfo){
         return studentsInfoService.addStudentInfo(studentInfo)
                 .doOnNext(savedStudentInfo -> studentInfoSink.tryEmitNext(savedStudentInfo));
     }
 
     @PutMapping("/studentinfos/{id}")
-    public Mono<StudentInfo> updateStudentInfo(@RequestBody StudentInfo updatedStudentInfo, @PathVariable("id") Integer studentId){
+    public Mono<StudentInfoDTO> updateStudentInfo(@RequestBody StudentInfo updatedStudentInfo, @PathVariable("id") Integer studentId){
         return studentsInfoService.updatedStudentInfo(updatedStudentInfo, studentId);
     }
 
