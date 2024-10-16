@@ -18,7 +18,8 @@ rabbitmq:
   queue:
     studentsInfoQueue: students-info-queue
     paymentsQueue: payments-queue
-    responseQueue: response-queue
+    infoResponseQueue: info-response-queue
+    payemtsResponseQueue: payments-response-queue
   exchange:
     studentServiceExchange: students-service-exchange
   routingKeys:
