@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/config/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/config/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/config/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/service/RabbitMQProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/service/SSEMessageListner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/service/SSEMessageListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-app-config-repo/shared-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-app-config-repo/shared-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/config/RabbitMQConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/service/StudentsInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/service/StudentsInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/config/RabbitMQConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/controller/StudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/controller/StudentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/service/RabbitMQProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/service/RabbitMQProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/src/main/java/com/reactivespring/studentsservice/service/SSEMessageListner.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +57,10 @@
     &quot;accountId&quot;: &quot;52afb60e-1502-4759-b373-41332cfabfbd&quot;
   }
 }</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -338,7 +336,8 @@
       <workItem from="1728056714987" duration="19442000" />
       <workItem from="1728367720270" duration="23273000" />
       <workItem from="1728590594639" duration="809000" />
-      <workItem from="1728963175036" duration="15074000" />
+      <workItem from="1728963175036" duration="18278000" />
+      <workItem from="1729091750632" duration="4053000" />
     </task>
     <servers />
   </component>

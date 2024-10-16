@@ -3,8 +3,9 @@ package com.reactivespring.studentsservice.controller;
 import com.reactivespring.studentsservice.client.PaymentsClient;
 import com.reactivespring.studentsservice.client.StudentInfoRestClient;
 import com.reactivespring.studentsservice.dto.StudentDTO;
+import com.reactivespring.studentsservice.dto.StudentInfoDTO;
 import com.reactivespring.studentsservice.service.RabbitMQProducer;
-import com.reactivespring.studentsservice.service.SSEMessageListner;
+import com.reactivespring.studentsservice.service.SSEMessageListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,7 @@ public class StudentsController {
     private RabbitMQProducer rabbitMQProducer;
 
     @Autowired
-    private SSEMessageListner sseMessageListner;
+    private SSEMessageListener sseMessageListner;
 
     @GetMapping("/student/{id}")
     public Mono<StudentDTO> getStudentInfo(@PathVariable("id") Integer studentId){
@@ -40,8 +41,8 @@ public class StudentsController {
                 });
     }
 
-    @GetMapping(path = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<StudentDTO> streamMessages(@RequestParam Integer studentId) {
+    @GetMapping(path = "/student/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<String> streamMessages(@RequestParam Integer studentId) {
         rabbitMQProducer.requestStudentInfo(studentId);
         rabbitMQProducer.requestPayments(studentId);
         return sseMessageListner.subscribeMessages();

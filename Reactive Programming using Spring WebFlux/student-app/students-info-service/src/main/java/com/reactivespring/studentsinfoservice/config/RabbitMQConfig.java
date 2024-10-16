@@ -14,10 +14,8 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.queue.studentsInfoQueue}")
     private String STUDENTS_INFO_QUEUE;
 
-    @Value("${rabbitmq.queue.paymentsQueue}")
-    private String PAYMENTS_QUEUE;
 
-    @Value("${rabbitmq.queue.responseQueue}")
+    @Value("${rabbitmq.queue.infoResponseQueue}")
     private String RESPONSE_QUEUE;
 
     @Value("${rabbitmq.exchange.studentServiceExchange}")
@@ -26,21 +24,15 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.routingKeys.studentsInfoRoutingKey}")
     private String STUDENTS_INFO_REQUEST_ROUTING_KEY;
 
-    @Value("${rabbitmq.routingKeys.paymentsRoutingKey}")
-    private String PAYMENTS_REQUEST_ROUTING_KEY;
 
-    @Value("${rabbitmq.routingKeys.responseRoutingKey}")
-    private String RESPONSE_REQUEST_ROUTING_KEY;
+    @Value("${rabbitmq.routingKeys.infoResponseRoutingKey}")
+    private String INFO_RESPONSE_REQUEST_ROUTING_KEY;
 
     @Bean
     public Queue studentsInfoQueue(){
         return new Queue(STUDENTS_INFO_QUEUE);
     }
 
-    @Bean
-    public Queue paymentsQueue(){
-        return new Queue(PAYMENTS_QUEUE);
-    }
 
     @Bean
     public Queue responseQueue(){
@@ -60,20 +52,13 @@ public class RabbitMQConfig {
                 .with(STUDENTS_INFO_REQUEST_ROUTING_KEY);
     }
 
-    @Bean
-    public Binding bindPaymentsServiceQueue(Queue paymentsQueue, TopicExchange exchange){
-        return BindingBuilder
-                .bind(paymentsQueue)
-                .to(exchange)
-                .with(PAYMENTS_REQUEST_ROUTING_KEY);
-    }
 
     @Bean
     public Binding bindResponseQueue(Queue responseQueue, TopicExchange exchange){
         return BindingBuilder
                 .bind(responseQueue)
                 .to(exchange)
-                .with(RESPONSE_REQUEST_ROUTING_KEY);
+                .with(INFO_RESPONSE_REQUEST_ROUTING_KEY);
     }
 
 

@@ -21,7 +21,7 @@ public class StudentsInfoService {
 
     private final StudentInfoMapper studentInfoMapper = new StudentInfoMapper();
 
-    private RabbitTemplate rabbitTemplate;
+    private final RabbitTemplate rabbitTemplate;
 
     public StudentsInfoService(StudentsInfoRepository studentsInfoRepository, RabbitTemplate rabbitTemplate) {
         this.studentsInfoRepository = studentsInfoRepository;
@@ -31,10 +31,12 @@ public class StudentsInfoService {
     @RabbitListener(queues = "${rabbitmq.queue.studentsInfoQueue}")
     public void handleStudentInfoRequest(Integer studentId){
         log.info("Request recieved for student info with id : {}",studentId);
-        var studentData = studentsInfoRepository.findById(studentId).map(studentInfoMapper);
-
-        rabbitTemplate.convertAndSend("${rabbitmq.exchange.studentServiceExchange}","${rabbitmq.routingKeys.studentsInfoRoutingKey}",studentData);
-
+        studentsInfoRepository.findById(studentId).map(studentInfoMapper)
+                .subscribe(studentInfoDTO -> {
+                    log.info("Sending response from Student Info {}",studentInfoDTO);
+                    rabbitTemplate.convertAndSend("${rabbitmq.exchange.studentServiceExchange}","${rabbitmq.routingKeys.infoResponseRoutingKey}",studentInfoDTO.toString());
+                });
+//        log.info("Sent response from Student Info {}",studentData);
     }
     public Flux<StudentInfoDTO> findAllStudentsInfo() {
         return studentsInfoRepository.findAll()

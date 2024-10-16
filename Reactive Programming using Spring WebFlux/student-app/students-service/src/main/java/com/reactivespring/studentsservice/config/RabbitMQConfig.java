@@ -17,8 +17,11 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.queue.paymentsQueue}")
     private String PAYMENTS_QUEUE;
 
-    @Value("${rabbitmq.queue.responseQueue}")
-    private String RESPONSE_QUEUE;
+    @Value("${rabbitmq.queue.infoResponseQueue}")
+    private String INFO_RESPONSE_QUEUE;
+
+    @Value("${rabbitmq.queue.payemtsResponseQueue}")
+    private String PAYMENTS_RESPONSE_QUEUE;
 
     @Value("${rabbitmq.exchange.studentServiceExchange}")
     private String STUDENTS_SERVICE_EXCHANGE;
@@ -29,8 +32,11 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.routingKeys.paymentsRoutingKey}")
     private String PAYMENTS_REQUEST_ROUTING_KEY;
 
-    @Value("${rabbitmq.routingKeys.responseRoutingKey}")
-    private String RESPONSE_REQUEST_ROUTING_KEY;
+    @Value("${rabbitmq.routingKeys.infoResponseRoutingKey}")
+    private String INFO_RESPONSE_REQUEST_ROUTING_KEY;
+
+    @Value("${rabbitmq.routingKeys.paymentResponseRoutingKey}")
+    private String PAYMENT_RESPONSE_REQUEST_ROUTING_KEY;
 
     @Bean
     public Queue studentsInfoQueue(){
@@ -43,8 +49,13 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public Queue responseQueue(){
-        return new Queue(RESPONSE_QUEUE);
+    public Queue infoResponseQueue(){
+        return new Queue(INFO_RESPONSE_QUEUE);
+    }
+
+    @Bean
+    public Queue paymentsResponseQueue(){
+        return new Queue(PAYMENTS_RESPONSE_QUEUE);
     }
 
     @Bean
@@ -69,11 +80,19 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public Binding bindResponseQueue(Queue responseQueue, TopicExchange exchange){
+    public Binding bindInfoResponseQueue(Queue infoResponseQueue, TopicExchange exchange){
         return BindingBuilder
-                .bind(responseQueue)
+                .bind(infoResponseQueue)
                 .to(exchange)
-                .with(RESPONSE_REQUEST_ROUTING_KEY);
+                .with(INFO_RESPONSE_REQUEST_ROUTING_KEY);
+    }
+
+    @Bean
+    public Binding bindPaymentsResponseQueue(Queue paymentsQueue, TopicExchange exchange){
+        return BindingBuilder
+                .bind(paymentsQueue)
+                .to(exchange)
+                .with(PAYMENTS_REQUEST_ROUTING_KEY);
     }
 
 
