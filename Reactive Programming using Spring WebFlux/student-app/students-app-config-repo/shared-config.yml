@@ -25,4 +25,5 @@ rabbitmq:
   routingKeys:
     studentsInfoRoutingKey: student.info.request
     paymentsRoutingKey: payment.request
-    responseRoutingKey: student.response
+    infoResponseRoutingKey: studentInfo.response
+    paymentResponseRoutingKey: payment.response
