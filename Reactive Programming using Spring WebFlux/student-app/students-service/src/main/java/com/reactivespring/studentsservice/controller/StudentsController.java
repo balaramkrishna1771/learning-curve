@@ -3,10 +3,12 @@ package com.reactivespring.studentsservice.controller;
 import com.reactivespring.studentsservice.client.PaymentsClient;
 import com.reactivespring.studentsservice.client.StudentInfoRestClient;
 import com.reactivespring.studentsservice.dto.StudentDTO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.reactivespring.studentsservice.service.RabbitMQProducer;
+import com.reactivespring.studentsservice.service.SSEMessageListner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -21,6 +23,12 @@ public class StudentsController {
         this.paymentsClient = paymentsClient;
     }
 
+    @Autowired
+    private RabbitMQProducer rabbitMQProducer;
+
+    @Autowired
+    private SSEMessageListner sseMessageListner;
+
     @GetMapping("/student/{id}")
     public Mono<StudentDTO> getStudentInfo(@PathVariable("id") Integer studentId){
         return studentInfoRestClient.retrieveStudentInfoById(studentId)
@@ -30,5 +38,12 @@ public class StudentsController {
 
                         return paymentsListMono.map(payments -> new StudentDTO(studentInfo,payments));
                 });
+    }
+
+    @GetMapping(path = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<StudentDTO> streamMessages(@RequestParam Integer studentId) {
+        rabbitMQProducer.requestStudentInfo(studentId);
+        rabbitMQProducer.requestPayments(studentId);
+        return sseMessageListner.subscribeMessages();
     }
 }
