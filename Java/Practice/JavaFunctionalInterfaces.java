@@ -22,7 +22,9 @@ public class JavaFunctionalInterfaces {
         System.out.println(tSupplier.get());
 
         System.out.println(testFunction.apply(randomPerson.getAge()));
-        Printable printThing = () -> 1000;
+        Printable printThing = () -> {
+            int i = 1000;
+        };
         printThing(printThing);
     }
 

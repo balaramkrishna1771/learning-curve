@@ -12,18 +12,20 @@ public class JavaStreams {
                 persons.add(p1);
                 persons.add(p2);
 
+
+
                 List<Person> filteredPersons = persons.stream().filter(person -> person.getAge() >= 50)
-                                .collect(Collectors.toList());
-                // filteredPersons.forEach(person -> System.out.println(person));
-                // System.out.println(p1.toString());
+                                .toList();
+                 filteredPersons.forEach(System.out::println);
+                 System.out.println(p1.toString());
 
                 List<Integer> randomNumbers = Arrays.asList(2, 3, 12, 32, 1, 7, 5, 90, 34, 76);
 
                 List<Integer> squaredNumbers = randomNumbers.stream()
                                 .map(eachNumber -> (eachNumber * eachNumber))
                                 .filter(eachNumber -> eachNumber >= 100)
-                                .collect(Collectors.toList());
-                // squaredNumbers.forEach(System.out::println);
+                                .toList();
+                 squaredNumbers.forEach(System.out::println);
 
                 Integer sumOfRandomNumbers = randomNumbers.stream().map(eachNumber -> (eachNumber * eachNumber))
                                 .filter(eachNumber -> eachNumber >= 100)
@@ -39,5 +41,7 @@ public class JavaStreams {
 
                 System.out.println(sumOfRandomNumbers);
                 System.out.println(countOFNumbers);
+
+
         }
 }

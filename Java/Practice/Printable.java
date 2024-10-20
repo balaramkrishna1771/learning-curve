@@ -1,4 +1,4 @@
 @FunctionalInterface
 public interface Printable {
-    int print();
+    void print();
 }
