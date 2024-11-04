@@ -27,3 +27,11 @@ rabbitmq:
     paymentsRoutingKey: payment.request
     infoResponseRoutingKey: studentInfo.response
     paymentResponseRoutingKey: payment.response
+
+---
+Spring:
+  redis:
+    host: localhost
+    port: 6379
+  cache:
+    type: redis

@@ -27,18 +27,18 @@ public class PaymentService {
     }
 
 
-    @RabbitListener(queues = "${rabbitmq.queue.paymentsQueue}")
-    public void handlePaymentsRequest(Integer studentId){
-        log.info("Request recieved for student info with id : {}",studentId);
-        paymentRepository.findAllByStudentId(studentId).map(paymentMapper)
-                .subscribe(paymentDTO -> {
-                    log.info("Sending response from Payments {}",paymentDTO);
-                    rabbitTemplate.convertAndSend("${rabbitmq.exchange.studentServiceExchange}","${rabbitmq.routingKeys.paymentResponseRoutingKey}",paymentDTO.toString());
-
-                });
-
-
-    }
+//    @RabbitListener(queues = "${rabbitmq.queue.paymentsQueue}")
+//    public void handlePaymentsRequest(Integer studentId){
+//        log.info("Request recieved for student info with id : {}",studentId);
+//        paymentRepository.findAllByStudentId(studentId).map(paymentMapper)
+//                .subscribe(paymentDTO -> {
+//                    log.info("Sending response from Payments {}",paymentDTO);
+//                    rabbitTemplate.convertAndSend("${rabbitmq.exchange.studentServiceExchange}","${rabbitmq.routingKeys.paymentResponseRoutingKey}",paymentDTO.toString());
+//
+//                });
+//
+//
+//    }
 
     public Flux<PaymentDTO> getAllPayments(){
         return paymentRepository.findAll()

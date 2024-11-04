@@ -28,19 +28,19 @@ public class SSEMessageListener {
         sink.tryEmitNext(message);
     }
 
-    // Listener for student info service response
-    @RabbitListener(queues = "${rabbitmq.queue.infoResponseQueue}")
-    public void receiveStudentInfoData(String studentInfoDTO) {
-        log.info("Received student info: {}", studentInfoDTO);
-        emitMessage(studentInfoDTO);
-
-    }
-
-    // Listener for payment service response
-    @RabbitListener(queues = "${rabbitmq.queue.payemtsResponseQueue}")
-    public void receivePaymentData(String paymentDTO) {
-        log.info("Received payment info: {}", paymentDTO);
-        emitMessage(paymentDTO);
-
-    }
+//    // Listener for student info service response
+//    @RabbitListener(queues = "${rabbitmq.queue.infoResponseQueue}")
+//    public void receiveStudentInfoData(String studentInfoDTO) {
+//        log.info("Received student info: {}", studentInfoDTO);
+//        emitMessage(studentInfoDTO);
+//
+//    }
+//
+//    // Listener for payment service response
+//    @RabbitListener(queues = "${rabbitmq.queue.payemtsResponseQueue}")
+//    public void receivePaymentData(String paymentDTO) {
+//        log.info("Received payment info: {}", paymentDTO);
+//        emitMessage(paymentDTO);
+//
+//    }
 }
