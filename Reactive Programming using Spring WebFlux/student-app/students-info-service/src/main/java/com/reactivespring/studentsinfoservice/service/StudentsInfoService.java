@@ -5,6 +5,9 @@ import com.reactivespring.studentsinfoservice.dto.StudentInfoDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import com.reactivespring.studentsinfoservice.repository.StudentsInfoRepository;
@@ -43,6 +46,7 @@ public class StudentsInfoService {
                 .map(studentInfoMapper);
     }
 
+    @Cacheable(value = "studentInfoCache", key = "#studentId")
     public Mono<StudentInfoDTO> findStudentById(Integer studentId) {
         return studentsInfoRepository.findById(studentId)
                 .map(studentInfoMapper)
@@ -55,6 +59,7 @@ public class StudentsInfoService {
                 .log();
     }
 
+    @CachePut(value = "studentInfoCache", key = "#studentId")
     public Mono<StudentInfoDTO> updatedStudentInfo(StudentInfo updatedStudentInfo, Integer studentId) {
         log.info("Student ID that is given" + studentId);
         return studentsInfoRepository.findById(studentId)
@@ -71,6 +76,7 @@ public class StudentsInfoService {
                 .map(studentInfoMapper);
     }
 
+    @CacheEvict(value = "studentInfoCache", key = "#studentId")
     public Mono<Void> deleteStudentInfo(Integer studentId) {
         return studentsInfoRepository.deleteById(studentId).log();
     }
