@@ -7,6 +7,7 @@ import com.reactivespring.studentsservice.dto.StudentInfoDTO;
 import com.reactivespring.studentsservice.service.RabbitMQProducer;
 import com.reactivespring.studentsservice.service.SSEMessageListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -31,6 +32,7 @@ public class StudentsController {
     private SSEMessageListener sseMessageListner;
 
     @GetMapping("/student/{id}")
+    @Cacheable(value = "studentDataCache", key = "#studentId")
     public Mono<StudentDTO> getStudentInfo(@PathVariable("id") Integer studentId){
         return studentInfoRestClient.retrieveStudentInfoById(studentId)
                 .flatMap(studentInfo -> {

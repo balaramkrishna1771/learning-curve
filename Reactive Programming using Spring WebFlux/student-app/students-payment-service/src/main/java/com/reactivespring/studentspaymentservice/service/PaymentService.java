@@ -7,6 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -46,15 +49,19 @@ public class PaymentService {
                 .log();
     }
 
+
     public Mono<PaymentDTO> addPaymentRecord(Payment payment) {
         return paymentRepository.save(payment).map(paymentMapper).log();
     }
 
+    @Cacheable(value = "paymentCache", key = "#paymentId")
     public Mono<PaymentDTO> getPaymentById(Integer paymentId) {
         return paymentRepository.findById(paymentId)
                 .map(paymentMapper).log();
     }
 
+
+    @CachePut(value = "paymentCache", key = "#paymentId")
     public Mono<PaymentDTO> updatePaymentRecord(Payment updatedPaymentInfo, Integer paymentId) {
         return paymentRepository.findById(paymentId)
                 .flatMap(payment -> {
@@ -65,10 +72,12 @@ public class PaymentService {
                 }).map(paymentMapper);
     }
 
+    @CacheEvict(value = "paymentCache", key = "#paymentId")
     public Mono<Void> deletePayment(Integer paymentId) {
         return paymentRepository.deleteById(paymentId);
     }
 
+    @Cacheable(value = "paymentsCache", key = "#studentId")
     public Flux<PaymentDTO> getPaymentsByStudentId(Integer studentId) {
         return paymentRepository.findAllByStudentId(studentId)
                 .map(paymentMapper).log();

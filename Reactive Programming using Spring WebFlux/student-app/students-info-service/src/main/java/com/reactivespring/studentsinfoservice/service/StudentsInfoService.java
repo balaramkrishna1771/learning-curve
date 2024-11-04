@@ -50,6 +50,7 @@ public class StudentsInfoService {
     public Mono<StudentInfoDTO> findStudentById(Integer studentId) {
         return studentsInfoRepository.findById(studentId)
                 .map(studentInfoMapper)
+                .doOnNext(studentInfoDTO -> System.out.println("Fetching from database: " + studentInfoDTO))
                 .log();
     }
 

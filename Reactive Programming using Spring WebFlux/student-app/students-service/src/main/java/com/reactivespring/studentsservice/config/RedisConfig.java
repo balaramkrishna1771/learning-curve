@@ -1,4 +1,5 @@
-package com.reactivespring.studentsinfoservice.config;
+package com.reactivespring.studentsservice.config;
+
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;

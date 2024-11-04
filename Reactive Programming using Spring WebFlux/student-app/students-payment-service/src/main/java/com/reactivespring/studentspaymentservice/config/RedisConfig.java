@@ -1,4 +1,5 @@
-package com.reactivespring.studentsinfoservice.config;
+package com.reactivespring.studentspaymentservice.config;
+
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
@@ -68,3 +69,4 @@ public class RedisConfig {
                 .build();
     }
 }
+
