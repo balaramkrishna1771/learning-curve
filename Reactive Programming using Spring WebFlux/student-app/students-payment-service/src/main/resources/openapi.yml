@@ -1,0 +1,177 @@
+openapi: 3.0.1
+info:
+  title: Payment Service API
+  description: API for managing payments associated with students.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8081/v1
+paths:
+  /payments:
+    get:
+      summary: Get all payment records
+      description: Retrieve all payment records or filter by `studentId` if provided.
+      parameters:
+        - in: query
+          name: studentId
+          schema:
+            type: integer
+          required: false
+          description: ID of the student to filter payments.
+      responses:
+        '200':
+          description: List of payments
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PaymentDTO'
+        '404':
+          description: Payments not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new payment record
+      description: Add a new payment entry.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Payment'
+      responses:
+        '201':
+          description: Payment record created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentDTO'
+        '400':
+          description: Invalid payment data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /payments/{id}:
+    get:
+      summary: Get payment by ID
+      description: Retrieve a specific payment record by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the payment to retrieve.
+      responses:
+        '200':
+          description: Payment record found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentDTO'
+        '404':
+          description: Payment not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update payment record
+      description: Update an existing payment record by ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the payment to update.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Payment'
+      responses:
+        '200':
+          description: Payment record updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentDTO'
+        '404':
+          description: Payment not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete payment by ID
+      description: Delete a specific payment record by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the payment to delete.
+      responses:
+        '204':
+          description: Payment record deleted
+        '404':
+          description: Payment not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Payment:
+      type: object
+      properties:
+        studentId:
+          type: integer
+          description: ID of the student associated with the payment.
+        amount:
+          type: number
+          format: float
+          description: Payment amount.
+        paymentId:
+          type: integer
+          description: Unique ID of the payment.
+      required:
+        - studentId
+        - amount
+
+    PaymentDTO:
+      type: object
+      properties:
+        amount:
+          type: number
+          format: float
+          description: Payment amount.
+        paymentId:
+          type: integer
+          description: Unique ID of the payment.
+      required:
+        - amount
+
+    Error:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: TMF-compliant error code.
+        message:
+          type: string
+          description: Detailed error message.
+        status:
+          type: integer
+          description: HTTP status code associated with the error.
+      required:
+        - errorCode
+        - message

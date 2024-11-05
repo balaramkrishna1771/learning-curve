@@ -1,0 +1,199 @@
+openapi: 3.0.1
+info:
+  title: Student Info Service API
+  version: 1.0.0
+  description: API for managing student information.
+servers:
+  - url: http://localhost:8080/v1
+paths:
+  /studentinfos:
+    get:
+      summary: Get list of students
+      description: Retrieve a list of students, optionally filtered by email address.
+      parameters:
+        - name: email
+          in: query
+          required: false
+          description: Filter by email address.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of students.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StudentInfoDTO'
+        '404':
+          description: Students not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Add a new student
+      description: Create a new student entry.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentInfo'
+      responses:
+        '201':
+          description: Student created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentInfoDTO'
+        '400':
+          description: Invalid student data.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /studentinfos/{id}:
+    get:
+      summary: Get student by ID
+      description: Retrieve a specific student by their ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the student to retrieve.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A single student.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentInfoDTO'
+        '404':
+          description: Student not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a student
+      description: Update the details of an existing student.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the student to update.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentInfo'
+      responses:
+        '200':
+          description: Updated student.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentInfoDTO'
+        '404':
+          description: Student not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a student
+      description: Remove a student from the system.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the student to delete.
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Student deleted.
+        '404':
+          description: Student not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /studentinfos/stream:
+    get:
+      summary: Stream student info
+      description: Stream student information in NDJSON format.
+      responses:
+        '200':
+          description: Stream of student information in NDJSON format.
+          content:
+            application/x-ndjson:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StudentInfoDTO'
+
+components:
+  schemas:
+    StudentInfo:
+      type: object
+      properties:
+        studentId:
+          type: integer
+          description: Unique identifier for the student.
+        firstName:
+          type: string
+          description: First name of the student.
+        lastName:
+          type: string
+          description: Last name of the student.
+        email:
+          type: string
+          description: Email address of the student.
+        age:
+          type: integer
+          description: Age of the student, which should be a positive integer.
+      required:
+        - studentId
+        - firstName
+        - lastName
+        - email
+        - age
+
+    StudentInfoDTO:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Full name of the student.
+        age:
+          type: integer
+          description: Age of the student.
+      required:
+        - name
+        - age
+
+    Error:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: TMF-compliant error code.
+        message:
+          type: string
+          description: Detailed error message.
+        status:
+          type: integer
+          description: HTTP status code associated with the error.
+      required:
+        - errorCode
+        - message

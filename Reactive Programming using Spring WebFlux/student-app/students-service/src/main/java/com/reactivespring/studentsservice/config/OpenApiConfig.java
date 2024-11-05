@@ -1,4 +1,4 @@
-package com.reactivespring.studentsinfoservice.config;
+package com.reactivespring.studentsservice.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -12,9 +12,9 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI(){
         return new OpenAPI()
                 .info(new Info()
-                    .title("Student Info Service API")
-                    .version("1.0")
-                    .description("API to retrieve student information like name, age"));
+                        .title("Student Service API")
+                        .version("1.0")
+                        .description("API to retrieve student information along with payment information"));
     }
 
 }

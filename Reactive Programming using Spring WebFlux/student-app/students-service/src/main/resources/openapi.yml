@@ -1,0 +1,115 @@
+openapi: 3.0.1
+info:
+  title: Student Service API
+  description: API for retrieving student details along with their payments.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8082/v1
+paths:
+  /student/{id}:
+    get:
+      summary: Get student details by ID
+      description: Retrieve detailed student information, including personal info and payments, by student ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: Unique ID of the student.
+      responses:
+        '200':
+          description: Student details with payment history
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentDTO'
+        '404':
+          description: Student not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /student/stream:
+    get:
+      summary: Stream student data
+      description: Initiate a message stream with student information and payment details.
+      parameters:
+        - in: query
+          name: studentId
+          required: true
+          schema:
+            type: integer
+          description: ID of the student to stream messages for.
+      responses:
+        '200':
+          description: Streaming messages related to the student
+          content:
+            text/event-stream:
+              schema:
+                type: string
+                example: "Data and its message"
+        '404':
+          description: Student data not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    StudentDTO:
+      type: object
+      properties:
+        studentInfo:
+          $ref: '#/components/schemas/StudentInfoDTO'
+        payments:
+          type: array
+          items:
+            $ref: '#/components/schemas/PaymentDTO'
+      required:
+        - studentInfo
+        - payments
+
+    StudentInfoDTO:
+      type: object
+      properties:
+        fullName:
+          type: string
+          description: Student's full name.
+        age:
+          type: integer
+          description: Student's age.
+      required:
+        - fullName
+        - age
+
+    PaymentDTO:
+      type: object
+      properties:
+        amount:
+          type: number
+          format: float
+          description: Payment amount.
+        paymentId:
+          type: integer
+          description: Unique ID of the payment.
+      required:
+        - amount
+        - paymentId
+
+    Error:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: TMF-compliant error code.
+        message:
+          type: string
+          description: Detailed error message.
+        status:
+          type: integer
+          description: HTTP status code associated with the error.
+      required:
+        - errorCode
+        - message
