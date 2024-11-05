@@ -35,3 +35,10 @@ Spring:
     port: 6379
   cache:
     type: redis
+
+---
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
