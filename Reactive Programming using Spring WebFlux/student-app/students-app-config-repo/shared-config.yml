@@ -29,7 +29,7 @@ rabbitmq:
     paymentResponseRoutingKey: payment.response
 
 ---
-Spring:
+spring:
   redis:
     host: localhost
     port: 6379
@@ -42,3 +42,21 @@ springdoc:
     path: /v3/api-docs
   swagger-ui:
     path: /swagger-ui.html
+
+---
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+    topic: "student-info-events"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      retries: 3
+    consumer:
+      group-id: webflux-consumer-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+    admin:
+      properties:
+        bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
