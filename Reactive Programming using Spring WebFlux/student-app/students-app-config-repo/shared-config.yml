@@ -46,10 +46,7 @@ springdoc:
 ---
 spring:
   kafka:
-    template:
-      default-topic: student-info-topic
     bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
-    topic: "student-info-events"
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer

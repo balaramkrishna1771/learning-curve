@@ -1,2 +1,8 @@
 server:
   port: 8081
+---
+spring:
+  kafka:
+    template:
+      default-topic: student-payment-events
+    topic: "student-payment-events"

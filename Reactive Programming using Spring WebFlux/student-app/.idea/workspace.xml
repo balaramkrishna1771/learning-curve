@@ -295,12 +295,12 @@
       <item itemvalue="JUnit.StudentsInfoControllerIntgTest.getStudentsInfo" />
       <item itemvalue="JUnit.StudentsInfoControllerUnitTest.getStudentInfoById" />
       <item itemvalue="JUnit.StudentsInfoControllerUnitTest.updateStudentInfo" />
+      <item itemvalue="OpenAPI/Swagger Code Generator.openapi.yml" />
+      <item itemvalue="OpenAPI/Swagger Code Generator.openapi.yml (1)" />
       <item itemvalue="Spring Boot.StudentsAppConfigApplication" />
       <item itemvalue="Spring Boot.StudentsInfoServiceApplication" />
       <item itemvalue="Spring Boot.StudentsPaymentServiceApplication" />
       <item itemvalue="Spring Boot.StudentsServiceApplication" />
-      <item itemvalue="OpenAPI/Swagger Code Generator.openapi.yml (1)" />
-      <item itemvalue="OpenAPI/Swagger Code Generator.openapi.yml" />
     </list>
     <recent_temporary>
       <list>
