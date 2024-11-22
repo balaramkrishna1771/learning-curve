@@ -2,6 +2,7 @@ package com.reactivespring.studentspaymentservice.service;
 
 import com.reactivespring.studentspaymentservice.domain.Payment;
 import com.reactivespring.studentspaymentservice.dto.PaymentDTO;
+import com.reactivespring.studentspaymentservice.producer.StudentPaymentProducer;
 import com.reactivespring.studentspaymentservice.repository.PaymentRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -19,13 +20,15 @@ import reactor.core.publisher.Mono;
 public class PaymentService {
 
     private final PaymentRepository paymentRepository;
+    private final StudentPaymentProducer studentPaymentProducer;
 
     private final RabbitTemplate rabbitTemplate;
 
     private PaymentMapper paymentMapper = new PaymentMapper();
 
-    public PaymentService(PaymentRepository paymentRepository, RabbitTemplate rabbitTemplate){
+    public PaymentService(PaymentRepository paymentRepository, StudentPaymentProducer studentPaymentProducer, RabbitTemplate rabbitTemplate){
         this.paymentRepository = paymentRepository;
+        this.studentPaymentProducer = studentPaymentProducer;
         this.rabbitTemplate = rabbitTemplate;
     }
 
@@ -81,5 +84,12 @@ public class PaymentService {
     public Flux<PaymentDTO> getPaymentsByStudentId(Integer studentId) {
         return paymentRepository.findAllByStudentId(studentId)
                 .map(paymentMapper).log();
+    }
+
+    public Mono<Void> publishStudentPaymentEvent(PaymentDTO paymentDTO){
+        return studentPaymentProducer.sendStudentPaymentEvent(paymentDTO)
+                .doOnNext(integerStringSendResult -> System.out.println("Event Sent Successfully : " + integerStringSendResult))
+                .doOnError(error -> System.out.println("Error Occurred: "+error))
+                .then();
     }
 }

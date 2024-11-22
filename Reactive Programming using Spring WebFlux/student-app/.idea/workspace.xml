@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57ea9e6a-fecc-4343-9744-f7c880cee985" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/config/AutoCreateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/producer/StudentPaymentProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Kafka/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kafka/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/config/AutoCreateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/config/AutoCreateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/controller/StudentsInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/service/StudentsInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-info-service/src/main/java/com/reactivespring/studentsinfoservice/service/StudentsInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-payment-service/src/main/java/com/reactivespring/studentspaymentservice/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +170,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.StudentsInfoServiceApplication">
+  <component name="RunManager" selected="Spring Boot.StudentsPaymentServiceApplication">
     <configuration name="StudentsInfoControllerIntgTest.getStudentsInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="students-info-service" />
       <extension name="coverage">
@@ -345,6 +348,7 @@
       <workItem from="1731627799818" duration="559000" />
       <workItem from="1731629516338" duration="723000" />
       <workItem from="1732206948438" duration="8355000" />
+      <workItem from="1732245549374" duration="2877000" />
     </task>
     <servers />
   </component>

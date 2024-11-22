@@ -50,4 +50,12 @@ public class PaymentController {
         return paymentService.deletePayment(paymentId);
     }
 
+    @PostMapping("/payments/publish")
+    public Mono<ResponseEntity<String>> publishPaymentInfo(@RequestBody PaymentDTO paymentDTO){
+        return paymentService.publishStudentPaymentEvent(paymentDTO)
+                .thenReturn(ResponseEntity.status(HttpStatus.CREATED).body("Event successfully published"))
+                .onErrorResume(e -> Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occured")));
+
+    }
+
 }
