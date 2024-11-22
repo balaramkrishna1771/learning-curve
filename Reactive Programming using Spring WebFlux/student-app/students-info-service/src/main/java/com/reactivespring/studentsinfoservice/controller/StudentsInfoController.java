@@ -66,4 +66,11 @@ public class StudentsInfoController {
     public Mono<Void> deleteStudentInfo(@PathVariable("id") Integer studentId){
         return studentsInfoService.deleteStudentInfo(studentId);
     }
+
+    @PostMapping("/studentinfos/publish")
+    public Mono<ResponseEntity<String>> publishStudentInfo(@RequestBody StudentInfoDTO studentInfoDTO){
+        return studentsInfoService.publishStudentInfoEvent(studentInfoDTO)
+                .thenReturn(ResponseEntity.status(HttpStatus.CREATED).body("Event published successfully"))
+                .onErrorResume(throwable -> Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to sent "+ throwable.getMessage())));
+    }
 }

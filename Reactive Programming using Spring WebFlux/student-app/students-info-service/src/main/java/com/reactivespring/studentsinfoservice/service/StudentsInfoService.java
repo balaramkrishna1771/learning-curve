@@ -2,6 +2,7 @@ package com.reactivespring.studentsinfoservice.service;
 
 import com.reactivespring.studentsinfoservice.domain.StudentInfo;
 import com.reactivespring.studentsinfoservice.dto.StudentInfoDTO;
+import com.reactivespring.studentsinfoservice.producer.StudentsInfoProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -26,9 +27,12 @@ public class StudentsInfoService {
 
     private final RabbitTemplate rabbitTemplate;
 
-    public StudentsInfoService(StudentsInfoRepository studentsInfoRepository, RabbitTemplate rabbitTemplate) {
+    private final StudentsInfoProducer studentsInfoProducer;
+
+    public StudentsInfoService(StudentsInfoRepository studentsInfoRepository, RabbitTemplate rabbitTemplate, StudentsInfoProducer studentsInfoProducer) {
         this.studentsInfoRepository = studentsInfoRepository;
         this.rabbitTemplate = rabbitTemplate;
+        this.studentsInfoProducer = studentsInfoProducer;
     }
 
 //    @RabbitListener(queues = "${rabbitmq.queue.studentsInfoQueue}")
@@ -86,6 +90,13 @@ public class StudentsInfoService {
         return studentsInfoRepository.findByEmail(email)
                 .map(studentInfoMapper)
                 .log();
+    }
+
+    public Mono<Void> publishStudentInfoEvent(StudentInfoDTO studentInfoDTO){
+        return studentsInfoProducer.sendStudentInfoEvent(studentInfoDTO)
+                .doOnNext(integerStringSendResult -> System.out.println("Event Sent Successfully : " + integerStringSendResult))
+                .doOnError(error -> System.out.println("Error Occurred: "+error))
+                .then();
     }
 
 
